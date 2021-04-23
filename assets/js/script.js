@@ -100,5 +100,4 @@ function ativaChat(){
   fotobot.classList.add('d-none');
   chat.classList.remove('d-none');
   chat.classList.add('d-flex flex-column');
-
 }
