@@ -53,3 +53,52 @@ function enviar(){
     alert('Dados inválidos verifique os campos em vermelho do formulário')
   }
 }
+
+//Bot
+let mensagem = document.querySelector('#mensagem')
+let resposta = document.querySelector('#resposta')
+let chat = document.querySelector('#chat')
+function mensagemUsuario(){
+
+  if (mensagem.value.indexOf('localização') > -1){
+    resposta.innerHTML = 'Você poderá encontrar a nossa localização no final da página'
+    resposta.style.backgroundColor = '#6c757d';
+    resposta.style.borderRadius = '5px';
+    resposta.style.marginBottom= '10px';
+    chat.style.height= '215px';
+  }
+  if(mensagem.value.indexOf('sobre')> -1){
+    resposta.innerHTML = 'Você poderá encontrar sobre a empresa na guia sobre'
+    resposta.style.backgroundColor = '#6c757d';
+    resposta.style.borderRadius = '5px';
+    resposta.style.marginBottom= '10px';
+    chat.style.height= '215px';
+  }
+  if(mensagem.value.indexOf('horário de funcionamento')> -1){
+    resposta.innerHTML = 'Funcionamos de segunda a segunda para sempre levar alegria, e churrasco de qualidade aos nossos clientes'
+    resposta.style.backgroundColor = '#6c757d';
+    resposta.style.borderRadius = '5px';
+    resposta.style.marginBottom= '10px';
+    chat.style.height= '235px';
+  }
+}
+
+function fecharBot(){
+  document.querySelector('#ze').style.setProperty("display", "none", "important");
+}
+
+let falabot = document.querySelector('#falabot')
+let fotobot = document.querySelector('#foto-zezinho')
+function ativarBot(){
+  falabot.style.display='flex';
+}
+function desativaBot(){
+  falabot.style.display='none';
+}
+function ativaChat(){
+  fotobot.classList.remove('d-flex');
+  fotobot.classList.add('d-none');
+  chat.classList.remove('d-none');
+  chat.classList.add('d-flex flex-column');
+
+}
